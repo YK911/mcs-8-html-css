@@ -1,0 +1,36 @@
+body {
+  background: #fafafa;
+}
+/* Reset + common styles */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+button {
+  cursor: pointer;
+}
+/* #region Common */
+.section {
+}
+.section-title {
+}
+.accent {
+}
+/* #endregion */
+
+/* #region Logo */
+
+/* #endregion */
+
+/* #region Made  */
+.made {
+}
+.made-img {
+}
+.made-subtitle {
+}
+.made-list {
+}
+.made-item {
+}
+/* #endregion */
