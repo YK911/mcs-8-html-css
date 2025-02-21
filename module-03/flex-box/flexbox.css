@@ -1,0 +1,109 @@
+/* #region Basics */
+.container {
+  width: clamp(320px, 86%, 1200px);
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 100%;
+  /* min-height: 600px; */
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  list-style-type: none;
+  border-radius: 10px;
+  background-color: lightgreen;
+  outline: 5px solid rgb(75, 167, 75);
+  outline-offset: -5px;
+  padding: 0;
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  font-size: 64px;
+  line-height: 150px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  background-color: slateblue;
+  outline: 5px solid rgb(45, 35, 125);
+  outline-offset: -5px;
+}
+.btn {
+  display: inline-flex;
+
+  min-width: 220px;
+  min-height: 80px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  background-color: transparent;
+
+  .icon {
+    font-style: normal;
+    font-size: 28px;
+  }
+}
+/* #endregion */
+
+/* #region Flexbox */
+:root {
+  --items: 4;
+  --indent-col: 30px;
+  --indent-row: var(--indent-col);
+}
+.wrapper {
+  display: flex;
+  /* flex-wrap: wrap; */
+  column-gap: var(--indent-col);
+  row-gap: var(--indent-row);
+
+  /* Default properties */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
+  /* flex-wrap: nowrap; */
+  /* align-content: stretch; */
+}
+.item {
+  flex-grow: 0;
+  /* flex-shrink: 1; */
+  width: 100px;
+  /* flex-basis: calc(
+    (100% - var(--indent-col) * (var(--items) - 1)) / var(--items)
+  ); */
+  /* width: calc((100% - 25px * 3) / 4); */
+}
+/* #endregion */
+.btn {
+}
+/* #region Reviews section */
+.reviews {
+  --items: 5;
+  --indent-col: 10px;
+  --indent-row: 10px;
+
+  .wrapper {
+    background-color: rebeccapurple;
+  }
+  .item {
+    background-color: lightpink;
+  }
+}
+/* #endregion */
+/* #region Products */
+.products {
+  --items: 3;
+  --indent-col: 40px;
+
+  .wrapper {
+    background-color: rgb(153, 51, 141);
+  }
+  .item {
+    background-color: rgb(182, 221, 255);
+  }
+}
+/* #endregion */
