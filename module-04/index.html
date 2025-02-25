@@ -39,19 +39,22 @@
       <div class="header-container container">
         <a class="header-logo logo" href="#">
           <i class="logo-accent">SIMPLY</i> CHOCOLATE
-          <img
+          <!-- <img
             class="logo-icon"
             src="./images/favicon.svg"
             alt="Simply chocolate logo"
             width="24"
             height="24"
-          />
+          /> -->
+          <svg class="logo-icon" width="24" height="24">
+            <use href="./images/icons.svg#logo"></use>
+          </svg>
         </a>
 
         <nav class="header-nav">
           <ul class="header-nav-list">
             <li class="header-nav-item">
-              <a class="header-nav-link" href="#home">Home</a>
+              <a class="header-nav-link current" href="#home">Home</a>
             </li>
             <li class="header-nav-item">
               <a class="header-nav-link" href="#made">How it’s made?</a>
@@ -71,13 +74,9 @@
               rel="noopener noreferrer"
               aria-label="Link to Facebook"
             >
-              <img
-                class="socials-icon"
-                src="./images/icons/facebook.svg"
-                alt=""
-                width="40"
-                height="40"
-              />
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="socials-item">
@@ -87,13 +86,9 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="socials-icon"
-                src="./images/icons/instagram.svg"
-                alt=""
-                width="40"
-                height="40"
-              />
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="socials-item">
@@ -103,13 +98,9 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="socials-icon"
-                src="./images/icons/twitter.svg"
-                alt=""
-                width="40"
-                height="40"
-              />
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -133,7 +124,9 @@
             <a class="hero-link" href="#benefits">
               scroll down
               <span class="hero-link-icon">
-                <img src="./images/icons/arrow-down.svg" alt="Arow down icon" />
+                <svg class="icon" width="22" height="22">
+                  <use href="./images/symbols.svg#arrow-down"></use>
+                </svg>
               </span>
             </a>
           </div>
@@ -144,7 +137,7 @@
         <div class="container">
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
           <ul class="benefits-list">
-            <li class="benefits-item">
+            <li class="benefits-item" data-smile="✅">
               <h3 class="benefits-subtitle">Unsurpassed taste</h3>
               <p class="benefits-desc">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -153,7 +146,7 @@
                 Unsurpassed Taste and discover a new level of chocolate bliss.
               </p>
             </li>
-            <li class="benefits-item">
+            <li class="benefits-item" data-smile="❌">
               <h3 class="benefits-subtitle">Affordable price</h3>
               <p class="benefits-desc">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -163,7 +156,7 @@
                 in affordable luxury today.
               </p>
             </li>
-            <li class="benefits-item">
+            <li class="benefits-item" data-smile="✨">
               <h3 class="benefits-subtitle">Own production</h3>
               <p class="benefits-desc">
                 We take pride in our own production process, ensuring that every
@@ -536,15 +529,11 @@
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook link"
+                  aria-label="Link to Facebook"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/facebook.svg"
-                    alt=""
-                    width="40"
-                    height="40"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li class="socials-item">
@@ -553,15 +542,10 @@
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram link"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/instagram.svg"
-                    alt=""
-                    width="40"
-                    height="40"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
               <li class="socials-item">
@@ -570,15 +554,10 @@
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Twitter link"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/twitter.svg"
-                    alt=""
-                    width="40"
-                    height="40"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
