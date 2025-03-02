@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+
   --primary-font: 'Montserrat', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
 
@@ -202,6 +204,9 @@ img {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 100px;
+
+  transition: var(--trns-fast);
+  transition-property: color, border-color, background-color;
 }
 .btn-accent {
   background-color: rgb(var(--cl-accent));
@@ -271,6 +276,9 @@ img {
   border: 1px solid var(--cl-border);
   border-radius: 10px;
   color: var(--cl-icon);
+
+  transition: var(--trns-fast);
+  transition-property: color;
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -349,6 +357,11 @@ img {
   padding: 381px 40px 40px;
   border-radius: 30px;
 
+  background-image: linear-gradient(
+      rgb(var(--cl-primary) / 40%),
+      rgb(var(--cl-primary) / 40%)
+    ),
+    url('../images/hero/hero-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -373,6 +386,9 @@ img {
   gap: 14px;
 }
 .hero-link {
+  --cl-icon: rgb(var(--cl-accent));
+  --cl-circle: rgb(var(--cl-white));
+
   display: inline-flex;
   align-items: center;
   gap: 14px;
@@ -382,6 +398,16 @@ img {
   line-height: 1.28;
   letter-spacing: -0.03em;
   color: rgb(var(--cl-white));
+
+  transition: var(--trns-fast);
+  transition-property: color;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  --cl-icon: rgb(var(--cl-white));
+  --cl-circle: rgb(var(--cl-accent));
+  color: rgb(var(--cl-accent));
 }
 .hero-link-icon {
   display: flex;
@@ -390,8 +416,16 @@ img {
 
   width: 38px;
   height: 38px;
-  background: rgb(var(--cl-white));
+  background-color: var(--cl-circle);
   border-radius: 50%;
+
+  color: var(--cl-icon);
+
+  transition: var(--trns-fast);
+  transition-property: color, background-color;
+}
+.hero-link-icon svg {
+  fill: currentColor;
 }
 /* #endregion */
 
@@ -645,18 +679,27 @@ img {
 .reviews {
   padding-bottom: 120px;
 }
+.reviews-title {
+  margin-bottom: 90px;
+}
 .reviews-list {
   --indent-col: 28px;
   margin-bottom: 50px;
 }
 .reviews-item {
-  padding: 24px;
+  position: relative;
+
+  padding: 56px 24px 24px;
   background: rgb(var(--cl-white));
   border-radius: 15px;
   border: 1px solid rgb(var(--cl-primary) / 10%);
   box-shadow: 0px 10px 100px 0px rgb(var(--cl-primary) / 10%);
 }
 .reviews-avatar {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .reviews-author {
   margin-bottom: 24px;
@@ -740,6 +783,9 @@ img {
   font-weight: 500;
   line-height: 1.14;
   color: rgb(var(--cl-white));
+
+  transition: var(--trns-fast);
+  transition-property: color;
 }
 .footer-nav-link:hover,
 .footer-nav-link:focus {
