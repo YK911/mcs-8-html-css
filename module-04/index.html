@@ -30,22 +30,19 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="home">
       <div class="header-container container">
         <a class="header-logo logo" href="#">
-          <i class="logo-accent">SIMPLY</i> CHOCOLATE
-          <!-- <img
-            class="logo-icon"
-            src="./images/favicon.svg"
-            alt="Simply chocolate logo"
-            width="24"
-            height="24"
-          /> -->
+          <span class="logo-text">
+            <i class="logo-accent">SIMPLY</i> CHOCOLATE
+          </span>
           <svg class="logo-icon" width="24" height="24">
             <use href="./images/icons.svg#logo"></use>
           </svg>
@@ -138,6 +135,11 @@
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
           <ul class="benefits-list">
             <li class="benefits-item" data-smile="✅">
+              <div class="banefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#logo"></use>
+                </svg>
+              </div>
               <h3 class="benefits-subtitle">Unsurpassed taste</h3>
               <p class="benefits-desc">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -147,6 +149,11 @@
               </p>
             </li>
             <li class="benefits-item" data-smile="❌">
+              <div class="banefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#coin"></use>
+                </svg>
+              </div>
               <h3 class="benefits-subtitle">Affordable price</h3>
               <p class="benefits-desc">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -157,6 +164,11 @@
               </p>
             </li>
             <li class="benefits-item" data-smile="✨">
+              <div class="banefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#spoon"></use>
+                </svg>
+              </div>
               <h3 class="benefits-subtitle">Own production</h3>
               <p class="benefits-desc">
                 We take pride in our own production process, ensuring that every
@@ -176,7 +188,11 @@
             <span class="accent-text">taste</span> sensation
           </h2>
           <ul class="ingridients-list card-set">
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-1.png"
@@ -186,7 +202,11 @@
               />
               <h3 class="ingridients-caption">MILK CHOCOLATE</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-2.png"
@@ -196,7 +216,11 @@
               />
               <h3 class="ingridients-caption">MILK</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="600"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-3.png"
@@ -206,7 +230,11 @@
               />
               <h3 class="ingridients-caption">NUTS</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="800"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-4.png"
@@ -216,7 +244,11 @@
               />
               <h3 class="ingridients-caption">SEMI - SWEET CHOCOLATE</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="1000"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-5.png"
@@ -226,7 +258,11 @@
               />
               <h3 class="ingridients-caption">CACAO</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="1200"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-6.png"
@@ -236,7 +272,11 @@
               />
               <h3 class="ingridients-caption">RASPBERRY</h3>
             </li>
-            <li class="ingridients-item card-set-item">
+            <li
+              class="ingridients-item card-set-item"
+              data-aos="fade-right"
+              data-aos-delay="1400"
+            >
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-7.png"
@@ -264,6 +304,11 @@
                 width="600"
                 height="400"
               />
+              <button class="made-btn" type="button" aria-label="Player button">
+                <svg class="made-btn-icon" width="44" height="44">
+                  <use href="./images/icons.svg#play"></use>
+                </svg>
+              </button>
             </div>
             <div class="made-right-side">
               <h3 class="made-subtitle">
@@ -417,6 +462,14 @@
                   width="368"
                   height="464"
                 />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Chocolate with fruit is an unbeatable combination of two of
+                    the tastiest things in the world. This dessert combines
+                    delicate and aromatic chocolate with fresh and juicy fruits,
+                    creating a true poetry of taste.
+                  </p>
+                </div>
               </div>
               <div class="bestsellers-wrapper">
                 <h3 class="bestsellers-caption">CHOCOLATE WITH NUTS</h3>
@@ -431,6 +484,14 @@
                   width="368"
                   height="464"
                 />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Chocolate with fruit is an unbeatable combination of two of
+                    the tastiest things in the world. This dessert combines
+                    delicate and aromatic chocolate with fresh and juicy fruits,
+                    creating a true poetry of taste.
+                  </p>
+                </div>
               </div>
               <div class="bestsellers-wrapper">
                 <h3 class="bestsellers-caption">CHOCOLATE WITH FRUITS</h3>
@@ -445,6 +506,14 @@
                   width="368"
                   height="464"
                 />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Chocolate with fruit is an unbeatable combination of two of
+                    the tastiest things in the world. This dessert combines
+                    delicate and aromatic chocolate with fresh and juicy fruits,
+                    creating a true poetry of taste.
+                  </p>
+                </div>
               </div>
               <div class="bestsellers-wrapper">
                 <h3 class="bestsellers-caption">DARK CHOCOLATE</h3>
@@ -597,5 +666,17 @@
         </div>
       </div>
     </footer>
+
+    <a class="scroll-top" href="#home">
+      scroll top
+      <span class="scroll-top-icon">
+        <svg width="22" height="22">
+          <use href="./images/symbols.svg#arrow-down"></use>
+        </svg>
+      </span>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-animation.js"></script>
   </body>
 </html>
