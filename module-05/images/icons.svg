@@ -31,5 +31,13 @@
       <path d="M10.909 24V8.727l14.545 7.636-14.545 7.636z"/>
       <path stroke-width=".727" d="M31.636 16c0 8.636-7.001 15.636-15.636 15.636S.364 24.635.364 16C.364 7.364 7.365.364 16 .364S31.636 7.365 31.636 16z"/>
     </symbol>
+    <symbol id="x-close" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M24 8l-16 16"></path>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M8 8l16 16"></path>
+    </symbol>
+    <symbol id="user" viewBox="0 0 24 24" fill="none">
+      <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#FD9222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#FD9222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
   </defs>
 </svg>

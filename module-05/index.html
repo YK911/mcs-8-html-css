@@ -574,7 +574,11 @@
               </p>
             </li>
           </ul>
-          <button class="reviews-btn btn btn-secondary" type="button">
+          <button
+            class="reviews-btn btn btn-secondary"
+            type="button"
+            data-modal-open
+          >
             Leave a review
           </button>
         </div>
@@ -663,6 +667,11 @@
               <a class="footer-nav-link" href="#reviews">Chocolate is loved</a>
             </li>
           </ul>
+
+          <form name="subcription">
+            <input type="email" />
+            <button type="submit">Send</button>
+          </form>
         </div>
       </div>
     </footer>
@@ -676,7 +685,89 @@
       </span>
     </a>
 
+    <div class="backdrop is-open" data-modal>
+      <div class="modal">
+        <button
+          class="modal-btn"
+          type="button"
+          aria-label="Modal close button"
+          data-modal-close
+        >
+          <svg class="modal-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-caption">
+          LEAVE A REVIEW ABOUT
+          <span class="accent-text">OUR CHOCOLATE</span>
+        </p>
+
+        <form class="modal-form" name="feedback">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-name">Name</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#user"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-email">Email</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-phone"
+              >Phone number</label
+            >
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user-comment">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/aos-animation.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
