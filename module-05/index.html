@@ -712,9 +712,15 @@
                 type="text"
                 name="user-name"
                 id="user-name"
+                required
+                pattern="[a-zA-z]+\s[a-zA-z]+"
+                title="Name must be two words separated by space"
               />
               <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#user"></use>
+              </svg>
+              <svg class="modal-form-icon error" width="24" height="24">
+                <use href="./images/icons.svg#error"></use>
               </svg>
             </div>
           </div>
@@ -727,6 +733,7 @@
                 type="email"
                 name="user-email"
                 id="user-email"
+                required
               />
               <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#email"></use>
@@ -735,9 +742,9 @@
           </div>
 
           <div class="modal-form-field">
-            <label class="modal-form-label" for="user-phone"
-              >Phone number</label
-            >
+            <label class="modal-form-label" for="user-phone">
+              Phone number
+            </label>
             <div class="modal-form-wrapper">
               <input
                 class="modal-form-input"
@@ -754,14 +761,30 @@
           <div class="modal-form-field">
             <label class="modal-form-label" for="user-comment">Comment</label>
             <textarea
+              class="modal-form-comment"
               name="user-comment"
               id="user-comment"
               placeholder="Enter text"
+              minlength="12"
+              maxlength="1000"
             ></textarea>
           </div>
 
+          <label class="modal-form-agreement">
+            <input class="visually-hidden" type="checkbox" value="true" />
+            <span class="modal-form-checkbox">
+              <svg class="modal-form-checkbox-icon" width="10" height="10">
+                <use href="./images/icons.svg#checkmark"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the
+            <a href="#" class="modal-form-policy">Privacy Policy</a>
+          </label>
+
           <!-- Checkbox -->
-          <button type="submit">Send</button>
+          <button class="modal-submit-btn btn btn-accent" type="submit">
+            Send
+          </button>
         </form>
       </div>
     </div>

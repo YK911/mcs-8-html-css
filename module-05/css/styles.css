@@ -882,5 +882,173 @@ img {
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
+/* Form */
+.modal-form {
+}
+.modal-form-field {
+  margin-bottom: 18px;
+}
+.modal-form-label {
+  display: block;
+  margin-bottom: 8px;
+}
+.modal-form-wrapper {
+  position: relative;
+}
+.modal-form-input {
+  display: block;
+  width: 100%;
+  min-height: 68px;
+  padding: 22px 62px;
 
+  color: #404040;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+  outline: transparent;
+  transition: var(--trns-fast);
+  transition-property: border-color;
+}
+.modal-form-input:focus {
+  border-color: rgb(var(--cl-accent));
+}
+/* .modal-form-input:not(:placeholder-shown):invalid:required:focus {
+  border-color: rgba(231, 74, 59, 1);
+} */
+
+.modal-form-input:user-invalid {
+  border-color: rgba(231, 74, 59, 1);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  stroke: rgb(64, 64, 64);
+  pointer-events: none;
+  transition: var(--trns-fast);
+  transition-property: stroke;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  stroke: rgb(var(--cl-accent));
+}
+.modal-form-input:user-invalid + .modal-form-icon {
+  stroke: rgba(231, 74, 59, 1);
+}
+
+.modal-form-icon.error {
+  left: calc(100% - 48px);
+  stroke: none;
+  opacity: 0;
+  transition: var(--trns-fast);
+  transition-property: opacity;
+}
+
+.modal-form-input:user-invalid ~ .modal-form-icon.error {
+  opacity: 1;
+}
+
+.modal-form-comment {
+  width: 100%;
+  height: 137px;
+  padding: 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  outline: transparent;
+  resize: none;
+
+  font-size: 18px;
+  letter-spacing: -0.02em;
+
+  transition: var(--trns-fast);
+  transition-property: box-shadow, border-color;
+}
+.modal-form-comment:focus {
+  border-color: rgb(var(--cl-accent));
+}
+.modal-form-comment:focus-visible {
+  box-shadow: 0 0 0 4px rgb(var(--cl-accent) / 25%);
+}
+.modal-form-comment::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+}
+
+/* Argeement block */
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+  user-select: none;
+}
+.modal-form-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  /* margin-right: 12px; */
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  cursor: pointer;
+  transition: var(--trns-fast);
+  transition-property: border-color, background-color;
+}
+input[type='checkbox']:focus-visible + .modal-form-checkbox {
+  box-shadow: 0 0 0 4px rgb(var(--cl-accent) / 25%);
+}
+input[type='checkbox']:checked + .modal-form-checkbox {
+  border-color: transparent;
+  background-color: rgb(var(--cl-accent));
+}
+.modal-form-checkbox-icon {
+  opacity: 0;
+  transition: var(--trns-fast);
+  transition-property: opacity;
+}
+input[type='checkbox']:checked
+  + .modal-form-checkbox
+  > .modal-form-checkbox-icon {
+  opacity: 1;
+}
+/* input[type='checkbox'] {
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M3.94874 9.75416C4.38459 9.75416 4.71409 9.58679 4.93724 9.25207L9.76464 1.97696C9.84484 1.85841 9.90411 1.7416 9.94247 1.62654C9.98082 1.50799 10 1.39467 10 1.28658C10 0.986723 9.8954 0.739164 9.68619 0.543906C9.48047 0.345161 9.22594 0.245789 8.92259 0.245789C8.71339 0.245789 8.53556 0.28763 8.38912 0.371312C8.24616 0.451507 8.11018 0.590977 7.98117 0.789722L3.92782 7.15478L1.89854 4.72278C1.67887 4.46824 1.40342 4.34098 1.07218 4.34098C0.761855 4.34098 0.505579 4.44035 0.303347 4.63909C0.101116 4.83784 0 5.08714 0 5.387C0 5.52299 0.0209205 5.652 0.0627615 5.77403C0.108089 5.89258 0.190028 6.01636 0.308577 6.14537L3.00209 9.32006C3.24965 9.60946 3.5652 9.75416 3.94874 9.75416Z' fill='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0;
+  transition: var(--trns-fast);
+  transition-property: border-color, background-color, background-size;
+}
+input[type='checkbox']:checked {
+  border-color: transparent;
+  background-color: rgb(var(--cl-accent));
+  background-size: 10px;
+} */
+
+.modal-form-policy {
+  color: rgb(var(--cl-accent));
+}
+
+.modal-submit-btn:disabled {
+  filter: grayscale(1);
+  background-color: rgb(var(--cl-accent));
+  color: rgb(var(--cl-white));
+
+  cursor: not-allowed;
+}
 /* #endregion */
