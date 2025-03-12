@@ -30,14 +30,25 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
     />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="(min-width: 1200px)"
+    />
 
     <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 767px)" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)" />
+    <link
+      rel="stylesheet"
+      href="./css/styles.css"
+      media="(min-width: 1200px)"
+    /> -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header hide">
       <div class="header-container container">
         <a class="header-logo logo" href="#">
           <span class="logo-text">
@@ -105,7 +116,7 @@
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero" id="home">
+      <section class="hero hide" id="home">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our&nbsp;finest ingredients for a
@@ -130,7 +141,7 @@
         </div>
       </section>
       <!-- Benefits -->
-      <section class="benefits" id="benefits">
+      <section class="benefits hide" id="benefits">
         <div class="container">
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
           <ul class="benefits-list">
@@ -341,7 +352,7 @@
         </div>
       </section>
       <!-- Products -->
-      <section class="products section">
+      <section class="products section hide">
         <div class="container">
           <h2 class="section-title">
             Our <span class="accent-text">products</span>
@@ -447,7 +458,7 @@
         </div>
       </section>
       <!-- Bestsellers -->
-      <section class="bestsellers section">
+      <section class="bestsellers section hide">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-text">Top</span> sellers
@@ -523,7 +534,7 @@
         </div>
       </section>
       <!-- Reviews -->
-      <section class="reviews section" id="reviews">
+      <section class="reviews section hide" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title">
             <span class="accent-text">Chocolate</span> is loved
@@ -585,7 +596,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -685,7 +696,7 @@
       </span>
     </a>
 
-    <div class="backdrop is-open" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button
           class="modal-btn"
@@ -789,8 +800,11 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/aos-animation.js"></script>
+    <script
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+      media="(min-width: 1200px)"
+    ></script>
+    <script src="./js/aos-animation.js" media="(min-width: 1200px)"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
