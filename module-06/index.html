@@ -48,18 +48,24 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header hide">
+    <header class="header">
       <div class="header-container container">
-        <a class="header-logo logo" href="#">
-          <span class="logo-text">
-            <i class="logo-accent">SIMPLY</i> CHOCOLATE
-          </span>
-          <svg class="logo-icon" width="24" height="24">
-            <use href="./images/icons.svg#logo"></use>
-          </svg>
-        </a>
-
         <nav class="header-nav">
+          <a class="header-logo logo" href="#">
+            <span class="logo-text">
+              <i class="logo-accent">SIMPLY</i> CHOCOLATE
+            </span>
+            <svg class="logo-icon" width="24" height="24">
+              <use href="./images/icons.svg#logo"></use>
+            </svg>
+          </a>
+
+          <button class="menu-btn" type="button" aria-label="Open menu button">
+            <svg class="menu-btn-icon" width="28" height="28">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
+
           <ul class="header-nav-list">
             <li class="header-nav-item">
               <a class="header-nav-link current" href="#home">Home</a>
@@ -73,7 +79,7 @@
           </ul>
         </nav>
 
-        <ul class="header-socials socials">
+        <ul class="header-socials socials socials-dark">
           <li class="socials-item">
             <a
               class="socials-link"
@@ -116,7 +122,7 @@
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero hide" id="home">
+      <section class="hero" id="home">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our&nbsp;finest ingredients for a
@@ -206,10 +212,15 @@
             >
               <img
                 class="ingridients-ill"
-                src="./images/ingridients/img-1.png"
+                srcset="
+                  ./images/ingridients/img-1@1x.png 1x,
+                  ./images/ingridients/img-1@2x.png 2x
+                "
+                src="./images/ingridients/img-1@1x.png"
                 alt="MILK CHOCOLATE"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">MILK CHOCOLATE</h3>
             </li>
@@ -221,9 +232,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-2.png"
+                srcset="
+                  ./images/ingridients/img-2@1x.png 1x,
+                  ./images/ingridients/img-2@2x.png 2x
+                "
                 alt="MILK"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">MILK</h3>
             </li>
@@ -235,9 +251,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-3.png"
+                srcset="
+                  ./images/ingridients/img-3@1x.png 1x,
+                  ./images/ingridients/img-3@2x.png 2x
+                "
                 alt="NUTS"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">NUTS</h3>
             </li>
@@ -249,9 +270,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-4.png"
+                srcset="
+                  ./images/ingridients/img-4@1x.png 1x,
+                  ./images/ingridients/img-4@2x.png 2x
+                "
                 alt="SEMI - SWEET CHOCOLATE"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">SEMI - SWEET CHOCOLATE</h3>
             </li>
@@ -263,9 +289,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-5.png"
+                srcset="
+                  ./images/ingridients/img-5@1x.png 1x,
+                  ./images/ingridients/img-5@2x.png 2x
+                "
                 alt="CACAO"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">CACAO</h3>
             </li>
@@ -277,9 +308,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-6.png"
+                srcset="
+                  ./images/ingridients/img-6@1x.png 1x,
+                  ./images/ingridients/img-6@2x.png 2x
+                "
                 alt="RASPBERRY"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">RASPBERRY</h3>
             </li>
@@ -291,9 +327,14 @@
               <img
                 class="ingridients-ill"
                 src="./images/ingridients/img-7.png"
+                srcset="
+                  ./images/ingridients/img-7@1x.png 1x,
+                  ./images/ingridients/img-7@2x.png 2x
+                "
                 alt="COCONUT OIL"
                 width="214"
                 height="160"
+                loading="lazy"
               />
               <h3 class="ingridients-caption">COCONUT OIL</h3>
             </li>
@@ -308,13 +349,55 @@
           </h2>
           <div class="made-wrapper">
             <div class="made-left-side">
-              <img
+              <!-- <video src="" width="600" height="400">
+                <source media="(max-width: 767px)" srcset="" type="video/webm">
+                <source media="(min-width: 768px)" srcset="" type="video/webm">
+              </video> -->
+              <!-- <img
                 class="made-pic"
+                srcset="
+                  ./images/made/image_mob.jpg      335w,
+                  ./images/made/image_mob@2x.jpg   770w,
+                  ./images/made/image_tab@1x.jpg   614w,
+                  ./images/made/image_tab@2x.jpg  1228w,
+                  ./images/made/image_desk@1x.jpg  600w,
+                  ./images/made/image_desk@2x.jpg 1200w
+                "
+                sizes="(min-width: 1200px) 640w, (min-width: 768px) 614w, (min-width: 100vw) 335w"
                 src="./images/made/image.jpg"
                 alt=""
                 width="600"
                 height="400"
-              />
+              /> -->
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/made/image_desk.jpg    1x,
+                    ./images/made/image_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/made/image_tab.jpg    1x,
+                    ./images/made/image_tab@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/made/image_mob@2x.jpg 2x"
+                />
+                <img
+                  class="made-pic"
+                  src="./images/made/image_mob.jpg"
+                  alt=""
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                />
+              </picture>
               <button class="made-btn" type="button" aria-label="Player button">
                 <svg class="made-btn-icon" width="44" height="44">
                   <use href="./images/icons.svg#play"></use>
@@ -606,7 +689,7 @@
 
           <div class="footer-middle">
             <p class="footer-caption">Social networks</p>
-            <ul class="footer-socials socials">
+            <ul class="footer-socials socials socials-light">
               <li class="socials-item">
                 <a
                   class="socials-link"
@@ -799,6 +882,70 @@
         </form>
       </div>
     </div>
+
+    <!-- #region Mobile menu -->
+    <div class="backdrop">
+      <div class="mobile-menu">
+        <button class="menu-btn" type="button">
+          <svg class="menu-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu-links">
+          <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Home</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">How it’s made?</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Chocolate is loved</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-socials socials socials-light">
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Facebook"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- #endregion -->
 
     <script
       src="https://unpkg.com/aos@2.3.1/dist/aos.js"
